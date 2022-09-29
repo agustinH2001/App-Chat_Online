@@ -1,1 +1,1 @@
-web:gunicorn ChatApp.settings
+web:gunicorn ChatApp.settings --log-file -

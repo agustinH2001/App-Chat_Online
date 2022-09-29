@@ -15,15 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-from django.views.static import serve #SITIO
-from django.conf.urls import url #SITIO
-from django.conf import settings #SITIO
  
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("accounts.urls")),
     path("", include("chat.urls")),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), #SITIO
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), #SITIO
 ]
