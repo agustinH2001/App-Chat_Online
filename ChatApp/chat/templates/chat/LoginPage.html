@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:lightskyblue;">
+<body>
+<br><br><br>
+<center><h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif">Sala de chat Online (Django)</h1></center>
+<br><br>
+    <form method ="post">
+        <center>
+        <b>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type = "submit">Login</button>
+        </b>
+        </center>
+    </form>
+<br><br><br><br><br>
+<center><p><b>¿ No posee una cuenta ?</b></p></center>
+<center><a href="{% url 'signup' %}"><b>Registrarse</b></a></center>
+</body>
+</html>
